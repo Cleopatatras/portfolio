@@ -1,0 +1,134 @@
+header {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: $dark;
+  color: $white;
+  height: 170px;
+
+  .logo {
+    flex: 30%;
+    transform: rotate(-10deg);
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  // Navbar de base
+  .navbar {
+    display: flex;
+    flex: 70%;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .nav-links {
+      display: flex;
+      gap: 50px; // Espacement amélioré
+      padding: 0;
+      margin: 0;
+
+      a {
+        color: $white;
+        font-size: 1.4rem;
+        font-weight: bold;
+        padding: 10px 15px;
+        position: relative;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: lighten($secondary, 30%);
+        }
+
+        // Effet souligné animé au hover
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: -5px;
+          width: 0;
+          height: 3px;
+          background: $primary;
+          transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+        }
+
+        &:hover::after {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+
+    // Menu burger caché sur desktop
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+
+      span {
+        width: 30px;
+        height: 3px;
+        background: $primary;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      }
+    }
+  }
+
+  // Responsive - Menu burger actif en mobile
+  @media screen and (max-width: 768px) {
+    .burger {
+      display: flex !important;
+    }
+
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      left: -1500px;
+      width: 220px;
+      background: none;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px 0;
+      gap: 0;
+      border-radius: 0 0 10px 10px;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+
+      li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+
+        a {
+          display: block;
+          width: 100%;
+          padding: 10px 0;
+        }
+      }
+    }
+
+    .nav-active {
+      transform: translateX(0);
+      position: absolute;
+      left: 0;
+      gap: 0;
+    }
+
+    // Animation du bouton burger
+    .burger.active span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .burger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .burger.active span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+}

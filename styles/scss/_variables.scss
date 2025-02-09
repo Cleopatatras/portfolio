@@ -1,0 +1,40 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../../fonts/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: Playwrite;
+  src: url(../../fonts/PlaywriteFRModerne-Thin.ttf);
+}
+
+$primary: #6f21b6;
+$secondary: #aaa5ff;
+$accent: #fec131;
+$gray: #868e96;
+$lightgray: #f3efef;
+$dark: #171c28;
+$white: #ffffff;
+$border-radius: 10px;
+
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "gray": $gray,
+  "lightgray": $lightgray,
+  "dark": $dark,
+  "white": $white,
+  "accent": $accent,
+);
+
+$font-primary: "roboto", sans-serif;
+$font-secondary: "playwrite", serif;
+
+h1,
+h2,
+h3 {
+  font-family: $font-primary;
+}
+h2 {
+  font-size: 2rem;
+  padding: 1rem;
+}

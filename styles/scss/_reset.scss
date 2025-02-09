@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Uniformisation des polices et de la taille de base
+
+body {
+  font-family: sans-serif; // Remplace par ta variable si besoin
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+// Correction des styles des éléments de formulaire
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  outline: none;
+}
+
+// Images et vidéos responsives
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+// Correction des boutons interactifs
+button {
+  cursor: pointer;
+  background: none;
+}
+
+// Suppression des styles par défaut des titres
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+// Ajout d'un conteneur de base pour la mise en page
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
