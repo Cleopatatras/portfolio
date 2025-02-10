@@ -221,7 +221,7 @@ section .text span {
   font-style: italic;
   color: #6f21b6;
   padding: 0 1rem;
-  text-shadow: 2px 2px 2px #ffffff;
+  text-shadow: 1px 1px 5px #ffffff;
 }
 section .text .paragraphe {
   padding: 3rem;
