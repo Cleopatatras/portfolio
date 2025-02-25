@@ -302,7 +302,8 @@ section .techno i:hover {
 }
 .competences-bars .competence-bar .competence-bar-bar {
   background-color: #ffffff;
-  width: 100%;
+  width: 70%;
+  margin: 0 auto;
   height: 30px;
   border-radius: 10px;
   border: 1px solid;
